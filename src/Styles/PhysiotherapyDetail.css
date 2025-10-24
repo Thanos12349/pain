@@ -1,0 +1,53 @@
+.physio-detail-page {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 40px;
+  background: #f5f8ff;
+}
+
+.back-link {
+  position: relative;
+  display: inline-block;
+  padding: 12px 25px;
+  color: #0a58ca;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Supernatural', sans-serif;
+  border: 2px solid #0a58ca;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.back-link::before,
+.back-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(120deg, #0a58ca, #0078ff);
+  z-index: -1;
+  transition: all 1s ease;
+}
+
+.back-link::after {
+  left: 100%;
+}
+
+.back-link:hover::before {
+  left: 0;
+}
+.back-link:hover {
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 120, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.back-link:active {
+  transform: scale(0.96);
+}
