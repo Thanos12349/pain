@@ -95,18 +95,18 @@ const services = [
   { title: "Neurological Rehabilitation", desc: "Chiropractic, Rehab, Cryo Therapy, Cupping", img: "/images/13.jpg", slug: "NeurologicalDetail" },
   { title: "Cardiorespiratory & Functional Wellness Care", desc: "Relieves disc pressure, restores mobility", img: "/images/11.jpg", slug: "CardiorespiratoryDetail" },
   { title: "General & Preventive Physiotherapy Services", desc: "Recover faster, perform better", img: "/images/6.JPG", slug: "GeneralDetail" },
-  { title: "IASTM, CUPPING THERAPY, DRY NEEDLING, TAPING, PNF APPROACH", desc: "Improve alignment and balance", img: "/images/7.JPG", slug: "IastmDetails" },
+  { title: "IASTM, Cupping Therapy, Dry Needling, Taping, PNF Approach", desc: "Improve alignment and balance", img: "/images/7.JPG", slug: "IastmDetails" },
 ];
 
 export default function ServicesCarousel() {
   const carouselRef = useRef(null);
 
   const scrollLeft = () => {
-    carouselRef.current.scrollBy({ left: -350, behavior: "smooth" });
+    carouselRef.current.scrollBy({ left: -375, behavior: "smooth" });
   };
 
   const scrollRight = () => {
-    carouselRef.current.scrollBy({ left: 350, behavior: "smooth" });
+    carouselRef.current.scrollBy({ left: 375, behavior: "smooth" });
   };
 
   const [cardsPerPage, setCardsPerPage] = useState(4);
@@ -143,7 +143,6 @@ export default function ServicesCarousel() {
                 <img src={service.img} alt={service.title} className="service-img" />
                 <div className="card-overlay">
                   <h3 className="service-title">{service.title}</h3>
-                  <p className="service-desc">{service.desc}</p>
                 </div>
               </div>
             </Link>
