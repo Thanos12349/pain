@@ -6,7 +6,7 @@ import HeroSection from '../components/HeroSection'
 import Welcome from '../components/Welcome'
 import LeftViewCard from './LeftViewCard';
 import RightViewCard from './RightViewCard';
-import '../styles/PhysiotherapyDetail.css';
+import '../Styles/PhysiotherapyDetail.css';
 
 const serviceDetails = [
   {

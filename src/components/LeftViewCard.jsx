@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import '../styles/LeftViewCard.css'; 
+import '../Styles/LeftViewCard.css'; 
 
 const LeftViewCard = ({ title, img, description }) => {
   const controlsLeft = useAnimation();

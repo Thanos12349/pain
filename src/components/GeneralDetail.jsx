@@ -3,7 +3,7 @@ import Header from './Header'; // Adjust path if Header is in a different direct
 import Footer from './Footer';
 import LeftViewCard from './LeftViewCard';
 import RightViewCard from './RightViewCard';
-import '../styles/GeneralDetail.css';
+import '../Styles/GeneralDetail.css';
 import HeroSection from '../components/HeroSection'
 import Welcome from '../components/Welcome'
 import { useParams, Link } from 'react-router-dom';
