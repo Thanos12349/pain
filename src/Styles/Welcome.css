@@ -1,0 +1,128 @@
+/* ✅ Base Welcome Section */
+.welcome-section {
+  background-color: #f9f3ee;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding: 40px 20px;
+  text-align: justify;       /* text justified for even alignment */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  color: #6c3d2d;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ✅ Subheading */
+.welcome-subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: #383838;
+  margin-bottom: 15px;
+  text-align: center; /* keep subtitles centered */
+}
+
+/* ✅ Main Title */
+.welcome-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center; /* large titles centered */
+  color: #6c3d2d;
+}
+
+/* ✅ Description text (justified for all devices) */
+.welcome-description {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #000000;
+  max-width: 900px;
+  text-align: justify;   /* ensures full-justified text */
+  word-spacing: 1px;
+}
+
+/* ✅ Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(0px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.fade-out {
+  opacity: 1;
+  transform: translateY(40px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+/* ---------------------------------- */
+/* 📱 RESPONSIVE STYLES */
+/* ---------------------------------- */
+
+/* Medium screens (<= 992px) */
+@media (max-width: 992px) {
+  .welcome-section {
+    padding: 35px 25px;
+  }
+
+  .welcome-title {
+    font-size: 40px;
+  }
+
+  .welcome-subtitle {
+    font-size: 20px;
+  }
+
+  .welcome-description {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+  .welcome-section {
+    padding: 30px 20px;
+    border-radius: 10px;
+  }
+
+  .welcome-title {
+    font-size: 32px;
+  }
+
+  .welcome-subtitle {
+    font-size: 18px;
+  }
+
+  .welcome-description {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+}
+
+/* Mobile (<= 480px) */
+@media (max-width: 480px) {
+  .welcome-section {
+    padding: 25px 15px;
+  }
+
+  .welcome-title {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .welcome-subtitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .welcome-description {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+}

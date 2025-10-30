@@ -1,0 +1,255 @@
+
+.carousel-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.carousel-heading {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+  color: #8d6748;
+}
+
+.carousel-card-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.carousel-inner {
+  display: flex;
+  gap: 32px;
+  flex-wrap: nowrap;
+}
+
+.service-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  width: 330px;
+  height: 380px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.13);
+  background: #f7f7f7;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 130px;
+  background: rgba(40, 37, 37, 0.75);
+  color: #fff;
+  padding: 24px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .card-overlay {
+  transform: translateY(-2px);
+}
+
+.service-title {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #f7f7f7 !important;
+  font-size: 24px !important;
+  margin-bottom: 10px;
+  text-transform: capitalize!important;  
+}
+
+
+.service-desc {
+  font-size: 0.98rem;
+  opacity: 0.98;
+  color: #cbb7a2 !important;
+}
+
+.carousel-dots {
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 7px;
+  background: #cbb7a2;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.dot.active {
+  opacity: 1;
+  background: #8d6748;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(18, 17, 17, 0.85);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.scroll-btn:hover {
+  background: #8d6748;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+.carousel-card-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+}
+
+.carousel-card-wrapper::-webkit-scrollbar {
+  display: none; 
+}
+
+
+@media (max-width: 1024px) {
+  .carousel-heading {
+    font-size: 2.2rem;
+  }
+  
+  .service-card {
+    width: 580px;
+    height: 340px;
+  }
+
+  .carousel-inner {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-heading {
+    font-size: 1.6rem;
+  }
+
+  .service-card {
+    width: 230px;
+    height: 300px;
+  }
+
+  .carousel-inner {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 479px) {
+  .carousel-heading {
+    font-size: 1.6rem;
+  }
+
+  .service-card {
+    width: 350px;
+    max-width: 100%;
+    height: 260px;
+  }
+
+  .carousel-inner {
+    gap: 14px;
+  }
+
+  .card-overlay {
+    padding: 16px;
+    height: 80px;
+  }
+
+  .service-title {
+    font-size: 18px !important;
+  }
+
+  .service-desc {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 480px) {
+  .scroll-btn {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  .carousel-card {
+    width: 240px;
+    padding: 15px;
+  }
+
+  .scroll-btn.left {
+    left: 5px;
+  }
+
+  .scroll-btn.right {
+    right: 5px;
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media (max-width: 768px) {
+  .carousel-card {
+    width: 280px;
+  }
+
+  .scroll-btn {
+    padding: 8px;
+    font-size: 1rem;
+  }
+}
+
+/* Medium Laptops (769px - 1024px) */
+@media (max-width: 1024px) {
+  .carousel-card-wrapper {
+    gap: 15px;
+  }
+
+  .carousel-card {
+    width: 300px;
+  }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+  .carousel-card {
+    width: 320px;
+  }
+}
