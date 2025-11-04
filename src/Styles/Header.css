@@ -1,0 +1,180 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgba(115, 113, 113, 0.4);
+  /* padding: 15px 30px; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.nav-desktop {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: rgb(234, 228, 228);
+  font-weight: 500;
+}
+
+.appointment button {
+  background: #b26b20;
+  color: #0e0d0d;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.appointment button:hover {
+  background: #218838;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 250px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1500;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .close-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 20px;
+}
+
+.sidebar-links li a {
+  text-decoration: none;
+  color: #0e0d0d;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.sidebar-appointment button {
+  width: 100%;
+  padding: 10px;
+  background: #b26b20;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sidebar-appointment button:hover {
+  background: #218838;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 1400;
+}
+/* Highlight active link */
+.active-link {
+  color: #ffb347 !important; /* golden tone for highlight */
+  font-weight: 600;
+  position: relative;
+}
+
+/* Optional: Add subtle underline or box shadow */
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #ffb347;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.active-link:hover::after {
+  width: 100%;
+}
+
+/* Optional box shadow highlight for desktop nav */
+.nav-links li a.active-link {
+  box-shadow: 0px 2px 8px rgba(255, 179, 71, 0.4);
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+@media (max-width: 992px) {
+  .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  .nav-desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .appointment {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  .logo img {
+    height: 60px;
+  }
+}
